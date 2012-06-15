@@ -9,7 +9,7 @@
 		A2	Patada o pisotón
 		A3	Empujar
 		A13	Cabezazo
-		A14	Agarrar del cuello
+		A14	Agarrar
 		A15 Codazo o rodillazo
 	> Arma blanca
 		A4	De una mano (daga, etc.)
@@ -94,8 +94,10 @@ actions.push({uniqueId:'A13', prefix:'X6', equation:'aF', equation2:'aV/dV', nam
 	'0: Ataque fallido. Te haces una herida leve en la cabeza',
 	'-1 o menos: Ataque fallido. Te haces una herida leve en la cabeza y te caes al suelo'
 )});
-actions.push({uniqueId:'A14', prefix:'X6', equation:'aF', equation2:'aV/dV', name:'Atacar/Cuerpo a cuerpo/Agarrar del cuello', bonus:new Array(
+actions.push({uniqueId:'A14', prefix:'X6', equation:'aF', equation2:'aV/dV', name:'Atacar/Cuerpo a cuerpo/Agarrar', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
+	'+aF/3|La parte del cuerpo que se quiere agarrar está herida',
+	'+aF/4|La parte del cuerpo que se quiere agarrar está herida',
 	//
 	'-aF/4|El exorcista (tú) tiene herida leve en la mano',
 	'-aF/3|El exorcista (tú) tiene herida grave (lesión) en la mano'
