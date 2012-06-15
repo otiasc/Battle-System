@@ -123,8 +123,6 @@ function start() {
 		aESG = parseInt($('#profileIframe').contents().find('#profile_field_10_6').attr('value'));
 		aMEM = parseInt($('#profileIframe').contents().find('#profile_field_10_9').attr('value'));
 		aFAM = parseInt($('#profileIframe').contents().find('#profile_field_10_8').attr('value'));
-		
-		alert(aV + ':' + aF + ':' + aI + ':' + aD + '\n' + aPUN + ':' + aDOC + ':' + aESG + ':' + aMEM + ':' + aFAM);
     });
 	//
 	// Mostrar el menú de acciones
@@ -308,6 +306,7 @@ function loadTargetList() {
 	SELECCIONAR EL TARGET
 */
 function selectTarget(userName, userLink) {
+	alert('The user link is ' + userLink);
 	$('#nonSelectedTarget').addClass('disabled');
 	$('#selectedTarget').removeClass('disabled');
 	
@@ -342,8 +341,6 @@ function loadEnemyData() {
 	dESG = parseInt($('#enemyIframe').contents().find('#profile_field_10_6').attr('value'));
 	dMEM = parseInt($('#enemyIframe').contents().find('#profile_field_10_9').attr('value'));
 	dFAM = parseInt($('#enemyIframe').contents().find('#profile_field_10_8').attr('value'));
-	
-	alert(dV + ':' + dF + ':' + dI + ':' + dD + '\n' + dPUN + ':' + dDOC + ':' + dESG + ':' + dMEM + ':' + dFAM);
 }
 
 /*
