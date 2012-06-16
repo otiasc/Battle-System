@@ -306,7 +306,6 @@ function loadTargetList() {
 	SELECCIONAR EL TARGET
 */
 function selectTarget(userName, userLink) {
-	alert('The user link is ' + userLink);
 	$('#nonSelectedTarget').addClass('disabled');
 	$('#selectedTarget').removeClass('disabled');
 	
@@ -319,7 +318,7 @@ function selectTarget(userName, userLink) {
 	$('#actionList').removeClass('disabled');
 	
 	$('#usersearch').attr('value', userName);
-	$('#enemyIframe').attr('src', userLink);
+	$('#enemyIframe').location(userLink);
 	
 	$('#enemyIframe').load(function(e) {
         loadEnemyData();
