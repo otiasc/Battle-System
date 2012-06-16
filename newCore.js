@@ -113,9 +113,9 @@ function start() {
 	$.ajax({
 		url: "/profile",
 		cache: false
-	}).done(function(h) {
-		alert(h);
-		var ht = $('<html></html>').html(h);
+	}).done(function(html) {
+		alert(html);
+		var ht = $('<html></html>').html(html);
 		alert($(ht).find('#profile_field_10_3').attr('value'));
 	});
 	$('#profileIframe').load(function(e) {
