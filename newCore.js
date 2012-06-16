@@ -112,9 +112,10 @@ function start() {
 	
 	$.ajax({
 		url: "/profile",
-		cache: false
-	}).done(function(html) {
-		alert(html);
+		cache: false,
+		success: function (data) {
+			alert(data);
+		}
 	});
 	/*$('#profileIframe').load(function(e) {
 		//
