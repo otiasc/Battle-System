@@ -312,16 +312,16 @@ function selectTarget(userName, userLink) {
 	$('#selectedTarget').html('Objetivo: ' + userName + ' <a href="javascript:void(0)" onclick="start()">(Cambiar)</a>');
 	
 	$('#targetList').addClass('disabled');
-	$('#actionSearch').removeClass('disabled');
-	
-	$('#navBar').removeClass('disabled');
-	$('#actionList').removeClass('disabled');
 	
 	$('#usersearch').attr('value', userName);
-	$('#enemyIframe').location = userLink;
+	$('#enemyIframe').attr('src', userLink);
 	
 	$('#enemyIframe').load(function(e) {
         loadEnemyData();
+		$('#actionSearch').removeClass('disabled');
+	
+		$('#navBar').removeClass('disabled');
+		$('#actionList').removeClass('disabled');
     });
 }
 
