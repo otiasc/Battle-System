@@ -340,6 +340,8 @@ function loadEnemyData() {
 	dESG = parseInt($('#enemyIframe').contents().find('#profile_field_10_6').attr('value'));
 	dMEM = parseInt($('#enemyIframe').contents().find('#profile_field_10_9').attr('value'));
 	dFAM = parseInt($('#enemyIframe').contents().find('#profile_field_10_8').attr('value'));
+	
+	alert('Data' + '\n' + dV + ':' + dF + ':'  + dI + ':'  + dD + ':' + dPUN);
 }
 
 /*
