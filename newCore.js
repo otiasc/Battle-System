@@ -109,6 +109,13 @@ function start() {
 	//
 	// Introducir un evento load en el iframe de usuario
 	//
+	
+	$.ajax({
+		url: "/profile",
+		cache: false
+	}).done(function(html) { 
+		alert(html);
+	});
 	$('#profileIframe').load(function(e) {
 		//
 		// Cargar datos del usuario
