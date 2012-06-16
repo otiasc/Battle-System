@@ -115,10 +115,8 @@ function start() {
 		cache: false
 	}).done(function(html) {
 		alert(html);
-		var ht = $('<html></html>').html(html);
-		alert($(ht).find('#profile_field_10_3').attr('value'));
 	});
-	$('#profileIframe').load(function(e) {
+	/*$('#profileIframe').load(function(e) {
 		//
 		// Cargar datos del usuario
 		//
@@ -132,7 +130,7 @@ function start() {
 		aESG = parseInt($('#profileIframe').contents().find('#profile_field_10_6').attr('value'));
 		aMEM = parseInt($('#profileIframe').contents().find('#profile_field_10_9').attr('value'));
 		aFAM = parseInt($('#profileIframe').contents().find('#profile_field_10_8').attr('value'));
-    });
+    });*/
 	//
 	// Mostrar el menú de acciones
 	//
