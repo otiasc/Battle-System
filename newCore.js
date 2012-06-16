@@ -113,25 +113,23 @@ function start() {
 	$.ajax({
 		url: "/profile",
 		cache: false,
+		context: document.body,
+		dataType: 'text',
 		success: function (data) {
-			alert(data);
+			var d2 = $(data).contents();
+			
+			aV = parseInt(d2.find('#profile_field_10_3').attr('value'));
+			aF = parseInt(d2.find('#profile_field_10_1').attr('value'));
+			aI = parseInt(d2.find('#profile_field_10_2').attr('value'));
+			aD = parseInt(d2.find('#profile_field_10_4').attr('value'));
+		
+			aPUN = parseInt(d2.find('#profile_field_10_5').attr('value'));
+			aDOC = parseInt(d2.find('#profile_field_10_7').attr('value'));
+			aESG = parseInt(d2.find('#profile_field_10_6').attr('value'));
+			aMEM = parseInt(d2.find('#profile_field_10_9').attr('value'));
+			aFAM = parseInt(d2.find('#profile_field_10_8').attr('value'));
 		}
 	});
-	/*$('#profileIframe').load(function(e) {
-		//
-		// Cargar datos del usuario
-		//
-		aV = parseInt($('#profileIframe').contents().find('#profile_field_10_3').attr('value'));
-		aF = parseInt($('#profileIframe').contents().find('#profile_field_10_1').attr('value'));
-		aI = parseInt($('#profileIframe').contents().find('#profile_field_10_2').attr('value'));
-		aD = parseInt($('#profileIframe').contents().find('#profile_field_10_4').attr('value'));
-		
-		aPUN = parseInt($('#profileIframe').contents().find('#profile_field_10_5').attr('value'));
-		aDOC = parseInt($('#profileIframe').contents().find('#profile_field_10_7').attr('value'));
-		aESG = parseInt($('#profileIframe').contents().find('#profile_field_10_6').attr('value'));
-		aMEM = parseInt($('#profileIframe').contents().find('#profile_field_10_9').attr('value'));
-		aFAM = parseInt($('#profileIframe').contents().find('#profile_field_10_8').attr('value'));
-    });*/
 	//
 	// Mostrar el menú de acciones
 	//
@@ -139,8 +137,17 @@ function start() {
 	//
 	// Introducir un evento load en el iframe de memberlist
 	//
-	$('#memberlistIframe').load(function(e) {
+	/*$('#memberlistIframe').load(function(e) {
 		loadTargetList();
+	});*/
+	$.ajax({
+		url: "/memberlist",
+		cache: false,
+		context: document.body,
+		dataType: 'text',
+		success: function (data) {
+			loadTargetList(data);
+		}
 	});
 	$('#actionSearch').keyup(function(e) {
 		//
@@ -293,8 +300,8 @@ function loadActionsMenu(page) {
 	FUNCIÓN
 	CARGAR LOS TARGETS
 */
-function loadTargetList() {
-	var h = $('#memberlistIframe').contents().find('#memberlist tbody tr .avatar-mini a').each(function(index, element) {
+function loadTargetList(data) {
+	var h = $(data).contents().find('#memberlist tbody tr .avatar-mini a').each(function(index, element) {
 		var imgSrc = $(this).children('img').attr('src');
 		var text = $(this).text().slice(1);
 		var id = $(this).attr('href');
@@ -322,36 +329,46 @@ function selectTarget(userName, userLink) {
 	$('#targetList').addClass('disabled');
 	
 	$('#usersearch').attr('value', userName);
-	$('#enemyIframe').attr('src', userLink);
 	$('#loading').removeClass('disabled');
 	
-	$('#enemyDiv').load(userLink, function(r,s,x) {
-		$('#loading').addClass('disabled');
-        loadEnemyData();
-		$('#actionSearch').removeClass('disabled');
-	
-		$('#navBar').removeClass('disabled');
-		$('#actionList').removeClass('disabled');
-    });
+	$.ajax({
+		url: userLink,
+		cache: false,
+		context: document.body,
+		dataType: 'text',
+		success: function (data) {
+			$('#loading').addClass('disabled');
+			
+			$('#actionList').removeClass('disabled');
+			$('#navBar').removeClass('disabled');
+			loadEnemyData(data);
+			loadActionsMenu('');
+		}
+	});
 }
 
 /*
 	FUNCIÓN
 	LOADENEMYDATA
 */
-function loadEnemyData() {
-	dV = parseInt($('#enemyIframe').contents().find('#profile_field_10_3').attr('value'));
-	dF = parseInt($('#enemyIframe').contents().find('#profile_field_10_1').attr('value'));
-	dI = parseInt($('#enemyIframe').contents().find('#profile_field_10_2').attr('value'));
-	dD = parseInt($('#enemyIframe').contents().find('#profile_field_10_4').attr('value'));
+function loadEnemyData(data) {
+	dV = parseInt($(data).contents().find('#profile_field_10_3').attr('value'));
+	dF = parseInt($(data).contents().find('#profile_field_10_1').attr('value'));
+	dI = parseInt($(data).contents().find('#profile_field_10_2').attr('value'));
+	dD = parseInt($(data).contents().find('#profile_field_10_4').attr('value'));
 	
-	dPUN = parseInt($('#enemyIframe').contents().find('#profile_field_10_5').attr('value'));
-	dDOC = parseInt($('#enemyIframe').contents().find('#profile_field_10_7').attr('value'));
-	dESG = parseInt($('#enemyIframe').contents().find('#profile_field_10_6').attr('value'));
-	dMEM = parseInt($('#enemyIframe').contents().find('#profile_field_10_9').attr('value'));
-	dFAM = parseInt($('#enemyIframe').contents().find('#profile_field_10_8').attr('value'));
+	dPUN = parseInt($(data).contents().find('#profile_field_10_5').attr('value'));
+	dDOC = parseInt($(data).contents().find('#profile_field_10_7').attr('value'));
+	dESG = parseInt($(data).contents().find('#profile_field_10_6').attr('value'));
+	dMEM = parseInt($(data).contents().find('#profile_field_10_9').attr('value'));
+	dFAM = parseInt($(data).contents().find('#profile_field_10_8').attr('value'));
 	
-	alert('Data' + '\n' + dV + ':' + dF + ':'  + dI + ':'  + dD + ':' + dPUN);
+	if (isNaN(dV) || isNaN(dF) || isNaN(dI) || isNaN(dD)) {
+		alert('Data non valid');
+	}
+	if (isNaN(dPUN) || isNaN(dDOC) || isNaN(dESG) || isNaN(dMEM) || isNaN(dFAM)) {
+		alert('Data 2 non valid');
+	}
 }
 
 /*
