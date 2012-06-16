@@ -317,7 +317,7 @@ function selectTarget(userName, userLink) {
 	$('#enemyIframe').attr('src', userLink);
 	$('#loading').removeClass('disabled');
 	
-	$('#enemyIframe').load(function(e) {
+	$('#enemyDiv').load(userLink, function(r,s,x) {
 		$('#loading').addClass('disabled');
         loadEnemyData();
 		$('#actionSearch').removeClass('disabled');
