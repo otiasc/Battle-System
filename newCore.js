@@ -111,7 +111,7 @@ function start() {
 	//
 	
 	$.ajax({
-		url: "/profile",
+		url: "/profile?mode=editprofile",
 		cache: false,
 		context: document.body,
 		dataType: 'text',
@@ -369,6 +369,7 @@ function loadEnemyData(data) {
 	if (isNaN(dPUN) || isNaN(dDOC) || isNaN(dESG) || isNaN(dMEM) || isNaN(dFAM)) {
 		alert('Data 2 non valid');
 	}
+	alert(dV + ':' + dF + ':' + dI + ':' + dD);
 }
 
 /*
