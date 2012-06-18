@@ -353,18 +353,16 @@ function selectTarget(userName, userLink) {
 	LOADENEMYDATA
 */
 function loadEnemyData(data) {
-	dV = ($(data).contents().find('#field_id3 .field_uneditable').text());
-	dF = ($(data).contents().find('#field_id1 .field_uneditable').text());
-	dI = ($(data).contents().find('#field_id2 .field_uneditable').text());
-	dD = ($(data).contents().find('#field_id4 .field_uneditable').text());
+	dV = parseInt($(data).contents().find('#field_id3 .field_uneditable').text());
+	dF = parseInt($(data).contents().find('#field_id1 .field_uneditable').text());
+	dI = parseInt($(data).contents().find('#field_id2 .field_uneditable').text());
+	dD = parseInt($(data).contents().find('#field_id4 .field_uneditable').text());
 	
-	dPUN = parseInt($(data).contents().find('#profile_field_10_5').attr('value'));
-	dDOC = parseInt($(data).contents().find('#profile_field_10_7').attr('value'));
-	dESG = parseInt($(data).contents().find('#profile_field_10_6').attr('value'));
-	dMEM = parseInt($(data).contents().find('#profile_field_10_9').attr('value'));
-	dFAM = parseInt($(data).contents().find('#profile_field_10_8').attr('value'));
-	
-	alert(dV + ':' + dF + ':' + dI + ':' + dD);
+	dPUN = parseInt($(data).contents().find('#field_id5 .field_uneditable').text());
+	dDOC = parseInt($(data).contents().find('#field_id7 .field_uneditable').text());
+	dESG = parseInt($(data).contents().find('#field_id6 .field_uneditable').text());
+	dMEM = parseInt($(data).contents().find('#field_id9 .field_uneditable').text());
+	dFAM = parseInt($(data).contents().find('#field_id8 .field_uneditable').text());
 	
 	if (isNaN(dV) || isNaN(dF) || isNaN(dI) || isNaN(dD)) {
 		alert('Data non valid');
