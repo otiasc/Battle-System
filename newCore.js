@@ -331,6 +331,8 @@ function selectTarget(userName, userLink) {
 	$('#usersearch').attr('value', userName);
 	$('#loading').removeClass('disabled');
 	
+	alert(userLink);
+	
 	$.ajax({
 		url: userLink,
 		cache: false,
@@ -338,7 +340,6 @@ function selectTarget(userName, userLink) {
 		dataType: 'text',
 		success: function (data) {
 			$('#loading').addClass('disabled');
-			alert(data);
 			$('#actionList').removeClass('disabled');
 			$('#navBar').removeClass('disabled');
 			loadEnemyData(data);
