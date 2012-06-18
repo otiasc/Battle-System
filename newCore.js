@@ -353,10 +353,10 @@ function selectTarget(userName, userLink) {
 	LOADENEMYDATA
 */
 function loadEnemyData(data) {
-	dV = parseInt($(data).contents().find('#profile_field_10_3').attr('value'));
-	dF = parseInt($(data).contents().find('#profile_field_10_1').attr('value'));
-	dI = parseInt($(data).contents().find('#profile_field_10_2').attr('value'));
-	dD = parseInt($(data).contents().find('#profile_field_10_4').attr('value'));
+	dV = ($(data).contents().find('#profile_field_10_3').attr('value'));
+	dF = ($(data).contents().find('#profile_field_10_1').attr('value'));
+	dI = ($(data).contents().find('#profile_field_10_2').attr('value'));
+	dD = ($(data).contents().find('#profile_field_10_4').attr('value'));
 	
 	dPUN = parseInt($(data).contents().find('#profile_field_10_5').attr('value'));
 	dDOC = parseInt($(data).contents().find('#profile_field_10_7').attr('value'));
