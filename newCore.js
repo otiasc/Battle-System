@@ -338,7 +338,7 @@ function selectTarget(userName, userLink) {
 		dataType: 'text',
 		success: function (data) {
 			$('#loading').addClass('disabled');
-			
+			alert(data);
 			$('#actionList').removeClass('disabled');
 			$('#navBar').removeClass('disabled');
 			loadEnemyData(data);
