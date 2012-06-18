@@ -364,6 +364,8 @@ function loadEnemyData(data) {
 	dMEM = parseInt($(data).contents().find('#profile_field_10_9').attr('value'));
 	dFAM = parseInt($(data).contents().find('#profile_field_10_8').attr('value'));
 	
+	alert(dV + ':' + dF + ':' + dI + ':' + dD);
+	
 	if (isNaN(dV) || isNaN(dF) || isNaN(dI) || isNaN(dD)) {
 		alert('Data non valid');
 	}
