@@ -163,7 +163,7 @@ function loadTargets() {
 	$('#targets').addClass('loading');
 	
 	$.ajax({
-		url: "/memberlist.html",
+		url: "/memberlist",
 		cache: false,
 		context: document.body,
 		dataType: 'text',
