@@ -435,4 +435,6 @@ function pasteCode() {
 	
 	var t = $(parent.document).find('#text_editor_textarea').val();
 	$(parent.document).find('#text_editor_textarea').val(t + copyString);
+	$(parent.document).find('input[name=disable_html]').attr('checked', false);
+
 }
