@@ -426,12 +426,10 @@ function pasteCode() {
 	copyString += '<span class="BSDices">'
 	if (g_resultsDificulty>10) {g_resultsDificulty=10}
 	if (g_resultsDificulty<0) {g_resultsDificulty=0}
-	copyString += '[roll=\"' + parseInt(g_resultsDificulty,10) + '\"]' + Math.abs(g_resultsDices) + '[/roll]';
+	copyString += '[roll=\"GENERIC' + parseInt(g_resultsDificulty,10) + '\"]' + Math.abs(g_resultsDices) + '[/roll]';
 	copyString += '</span>'
 	
 	copyString += '</span>';
-	
-	alert(copyString);
 	
 	var t = $(parent.document).find('#text_editor_textarea').val();
 	$(parent.document).find('#text_editor_textarea').val(t + copyString);
