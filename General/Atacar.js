@@ -37,7 +37,7 @@
 */
 
 //  DADO 01
-actions.push({uniqueId:'A1', prefix:'X4', equation:'aF', equation2:'aV/dV', name:'Atacar/Cuerpo a cuerpo/Puñetazo', bonus:new Array(
+actions.push({uniqueId:'A1', prefix:'X4', equation:'aF', equation2:'aV/dV', category:'Atacar', name:'Puñetazo', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
 	'-aF/3|El exorcista (tú) tiene herida leve en mano',
@@ -49,7 +49,7 @@ actions.push({uniqueId:'A1', prefix:'X4', equation:'aF', equation2:'aV/dV', name
 	'-4 o menos: Ataque fallido. Golpeas en mal sitio. [u]Herida grave (lesión) en la mano[/u]'
 )});
 
-actions.push({uniqueId:'A18', prefix:'R7', equation:'aF', equation2:'aV/dV', name:'Atacar/Cuerpo a cuerpo/Espachurrar (enemigos pequeños)', bonus:new Array(
+actions.push({uniqueId:'A18', prefix:'R7', equation:'aF', equation2:'aV/dV', category:'Atacar', name:'Espachurrar (enemigos pequeños)', bonus:new Array(
 	'-1|El enemigo se mueve',
 	'-aF/3|El exorcista (tú) tiene herida leve en mano',
 	'-aF/2|El exorcista (tú) tiene herida grave (lesión) en mano o brazo'
@@ -59,7 +59,7 @@ actions.push({uniqueId:'A18', prefix:'R7', equation:'aF', equation2:'aV/dV', nam
 	'-1 o menos: Fallido. Agarras al enemigo pero te hace daño [u]Admin. o moderador eligen las consecuencias[/u]'
 )});
 
-actions.push({uniqueId:'A2', prefix:'6', equation:'aF', equation2:'aV/dV', name:'Atacar/Cuerpo a cuerpo/Patada o pisotón', bonus:new Array(
+actions.push({uniqueId:'A2', prefix:'6', equation:'aF', equation2:'aV/dV', category:'Atacar', name:'Patada o pisotón', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
 	'-aF/3|El exorcista (tú) tiene herida leve en pie',
@@ -71,7 +71,7 @@ actions.push({uniqueId:'A2', prefix:'6', equation:'aF', equation2:'aV/dV', name:
 	'-4 o menos: Ataque fallido. Golpeas en mal sitio. [u]Herida grave (lesión) en la mano[/u]'
 )});
 
-actions.push({uniqueId:'A3', prefix:'X4', equation:'aF', equation2:'aV/dV', name:'Atacar/Cuerpo a cuerpo/Empujar', bonus:new Array(
+actions.push({uniqueId:'A3', prefix:'X4', equation:'aF', equation2:'aV/dV', category:'Atacar', name:'Empujar', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
 	'-aF/4|El exorcista (tú) tiene herida leve en mano',
@@ -83,7 +83,7 @@ actions.push({uniqueId:'A3', prefix:'X4', equation:'aF', equation2:'aV/dV', name
 	'-1 a -2: Ataque fallido. Retrocedes tú',
 	'-3 o menos: Ataque fallido. Desequilibras y caes al suelo'
 )});
-actions.push({uniqueId:'A13', prefix:'X6', equation:'aF', equation2:'aV/dV', name:'Atacar/Cuerpo a cuerpo/Cabezazo', bonus:new Array(
+actions.push({uniqueId:'A13', prefix:'X6', equation:'aF', equation2:'aV/dV', category:'Atacar', name:'Cabezazo', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
 	'-aF/4|El exorcista (tú) tiene herida leve la cabeza',
@@ -94,7 +94,7 @@ actions.push({uniqueId:'A13', prefix:'X6', equation:'aF', equation2:'aV/dV', nam
 	'0: Ataque fallido. Te haces una herida leve en la cabeza',
 	'-1 o menos: Ataque fallido. Te haces una herida leve en la cabeza y te caes al suelo'
 )});
-actions.push({uniqueId:'A14', prefix:'X6', equation:'aF', equation2:'aV/dV', name:'Atacar/Cuerpo a cuerpo/Agarrar', bonus:new Array(
+actions.push({uniqueId:'A14', prefix:'X6', equation:'aF', equation2:'aV/dV', category:'Atacar', name:'Agarrar', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	'+aF/3|La parte del cuerpo que se quiere agarrar está herida',
 	'+aF/4|La parte del cuerpo que se quiere agarrar está herida',
@@ -107,7 +107,7 @@ actions.push({uniqueId:'A14', prefix:'X6', equation:'aF', equation2:'aV/dV', nam
 	'0: Ataque fallido. Te haces una herida leve en la cabeza',
 	'-1 o menos: Ataque fallido. Te haces una herida leve en la cabeza y te caes al suelo'
 )});
-actions.push({uniqueId:'A15', prefix:'X6', equation:'aF', equation2:'aV/dV', name:'Atacar/Cuerpo a cuerpo/Codazo o rodillazo', bonus:new Array(
+actions.push({uniqueId:'A15', prefix:'X6', equation:'aF', equation2:'aV/dV', category:'Atacar', name:'Codazo o rodillazo', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
 	'-aF/2|El exorcista (tú) tiene herida leve en el codo o rodilla',
@@ -123,7 +123,7 @@ actions.push({uniqueId:'A15', prefix:'X6', equation:'aF', equation2:'aV/dV', nam
 	Ataques débiles si no se tiene habilidad de esgrima
 */
 
-actions.push({uniqueId:'A4', prefix:'R7', equation:'1+aESG', equation2:'aV/dV', name:'Atacar/Arma blanca/De una mano (daga, etc.)', bonus:new Array(
+actions.push({uniqueId:'A4', prefix:'R7', equation:'1+aESG', equation2:'aV/dV', category:'Atacar', name:'Arma blanca de una mano (daga, etc.)', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
 	'-aESG/3|El exorcista (tú) tiene herida leve en mano',
@@ -136,7 +136,7 @@ actions.push({uniqueId:'A4', prefix:'R7', equation:'1+aESG', equation2:'aV/dV', 
 	'-6: Ataque fallido. Te hieres a ti mismo en la pierna. [u]Herida grave en pierna[/u]'
 )});
 
-actions.push({uniqueId:'A5', prefix:'R7', equation:'aESG', equation2:'(aV-1)/dV', name:'Atacar/Arma blanca/De dos manos (espada, etc.)', bonus:new Array(
+actions.push({uniqueId:'A5', prefix:'R7', equation:'aESG', equation2:'(aV-1)/dV', category:'Atacar', name:'Arma blanca de dos manos (espada, etc.)', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
 	'-aESG/3|El exorcista (tú) tiene herida leve en una mano',
@@ -155,7 +155,7 @@ actions.push({uniqueId:'A5', prefix:'R7', equation:'aESG', equation2:'(aV-1)/dV'
 	Ataques débiles si no se tiene fuerza
 */
 
-actions.push({uniqueId:'A6', prefix:'7', equation:'aF-3', equation2:'(aV-1)/dV', name:'Atacar/Arma cuerpo a cuerpo/Contundente (martillo, porra, etc.)', bonus:new Array(
+actions.push({uniqueId:'A6', prefix:'7', equation:'aF-3', equation2:'(aV-1)/dV', category:'Atacar', name:'Arma contundente (martillo, porra, etc.)', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
 	'-aF/3+2|El exorcista (tú) tiene herida leve en mano',
@@ -168,7 +168,7 @@ actions.push({uniqueId:'A6', prefix:'7', equation:'aF-3', equation2:'(aV-1)/dV',
 	'-4 o menos: Ataque fallido. Hieres al compañero más cercano. [u]Herida leve[/u]',
 	'-5: Ataque fallido. Hieres al compañero más cercano. [u]Herida grave[/u]'
 )});
-actions.push({uniqueId:'A7', prefix:'8', equation:'aF', equation2:'aV/dV', name:'Atacar/Arma cuerpo a cuerpo/No contundente (bastón, vara, k\'rik, etc.)/Golpear', bonus:new Array(
+actions.push({uniqueId:'A7', prefix:'8', equation:'aF', equation2:'aV/dV', category:'Atacar', name:'Arma ligeras (bastón, vara, k\'rik, etc.)', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
 	'-aF/3|El exorcista (tú) tiene herida leve en mano',
@@ -180,7 +180,7 @@ actions.push({uniqueId:'A7', prefix:'8', equation:'aF', equation2:'aV/dV', name:
 	'-1 o -2: Ataque fallido. Hieres al compañero más cercano. [u]Herida leve[/u]',
 	'-3 o menos: Ataque fallido. Hieres al compañero más cercano. [u]Herida leve[/u]'
 )});
-actions.push({uniqueId:'A10', prefix:'8', equation:'aF * aPUN + 1', equation2:'aV*aPUN/dV', name:'Atacar/Arma cuerpo a cuerpo/No contundente (bastón, vara, k\'rik, etc.)/Lanzar a distancia', bonus:new Array(
+actions.push({uniqueId:'A10', prefix:'8', equation:'aF * aPUN + 1', equation2:'aV*aPUN/dV', category:'Atacar', name:'Lanzar arma (bastón, vara, k\'rik, etc.)', bonus:new Array(
 	'-aF*aPUN/4|El enemigo está lejos',
 	'-aF*aPUN/3|El enemigo está muy lejos',
 	'-aF*aPUN|El enemigo no se ve',
@@ -200,7 +200,7 @@ actions.push({uniqueId:'A10', prefix:'8', equation:'aF * aPUN + 1', equation2:'a
 	CATEGORÍA Atacar/Arma de fuego
 	Ataques inútiles si no se tiene puntería
 */
-actions.push({uniqueId:'A8',prefix:'6', equation:'aF * aPUN - 4', equation2:'(aV+1)/dV', name:'Atacar/Arma de fuego/Automática (ametralladora, etc.)',  bonus:new Array(
+actions.push({uniqueId:'A8',prefix:'6', equation:'aF * aPUN - 4', equation2:'(aV+1)/dV', category:'Atacar', name:'Arma de fuego rápida (ametralladora)',  bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
 	'-aF*aPUN/3|El exorcista (tú) tiene herida leve en mano',
@@ -212,7 +212,7 @@ actions.push({uniqueId:'A8',prefix:'6', equation:'aF * aPUN - 4', equation2:'(aV
 	'-1 o -3: Ataque fallido. Te lesionas la mano. [u]Herida grave[/u]',
 	'-4 o menos: Ataque fallido. Hieres al compañero más cercano. [u]Herida grave[/u]'
 )});
-actions.push({uniqueId:'A9', prefix:'7', equation:'aF * aPUN - 2', equation2:'(aV+1)/dV', name:'Atacar/Arma de fuego/Manual (pistola, escopeta, etc.)', bonus:new Array(
+actions.push({uniqueId:'A9', prefix:'7', equation:'aF * aPUN - 2', equation2:'(aV+1)/dV', category:'Atacar', name:'Arma de fuego lenta (pistola)', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
 	'-aF*aPUN/3|El exorcista (tú) tiene herida leve en mano',
@@ -229,7 +229,7 @@ actions.push({uniqueId:'A9', prefix:'7', equation:'aF * aPUN - 2', equation2:'(a
 /*
 	CATEGORÍA: Atacar/Arma demoniaca
 */
-actions.push({uniqueId:'A11', prefix:'6', equation:'1+aESG', equation2:'aV/dV', name:'Atacar/Arma demoniaca/Espada demoniaca', bonus:new Array(
+actions.push({uniqueId:'A11', prefix:'6', equation:'1+aESG', equation2:'aV/dV', category:'Atacar', name:'Espada demoníaca', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
 	'-aESG/3|El exorcista (tú) tiene herida leve en mano',
@@ -242,7 +242,7 @@ actions.push({uniqueId:'A11', prefix:'6', equation:'1+aESG', equation2:'aV/dV', 
 	'-4: Ataque fallido. Hieres al compañero más cercano. [u]Herida muy grave[/u]',
 	'-5: se rompe'
 )});
-actions.push({uniqueId:'A16', prefix:'6', equation:'aF * aD', equation2:'1', name:'Atacar/Etc/Llamas demoníacas', bonus:new Array(
+actions.push({uniqueId:'A16', prefix:'6', equation:'aF * aD', equation2:'1', category:'Atacar', name:'Llamas demoníacas', bonus:new Array(
 	'-aF*aD/4|Llamas involuntarias',
 	'-aF*aD/2|Una demonio te está forzando a sacarlas'
 ), results: new Array(
@@ -258,7 +258,7 @@ actions.push({uniqueId:'A16', prefix:'6', equation:'aF * aD', equation2:'1', nam
 /*
 	CATEGORÍA: Atacar/Etc
 */
-actions.push({uniqueId:'A12', prefix:'7', equation:'aF * aPUN + 1', equation2:'aV/dV', name:'Atacar/Etc/Lanzar objeto', bonus:new Array(
+actions.push({uniqueId:'A12', prefix:'7', equation:'aF * aPUN + 1', category:'Atacar', equation2:'aV/dV', name:'Lanzar objeto', bonus:new Array(
 	'-2|El objeto pesa mucho',
 	'-aF*aPUN/4|El enemigo está lejos',
 	'-aF*aPUN/3|El enemigo está muy lejos',
@@ -275,7 +275,7 @@ actions.push({uniqueId:'A12', prefix:'7', equation:'aF * aPUN + 1', equation2:'a
 	'-6 o menos: Ataque fallido. Hieres a un compañero. [u]Herida leve[/u]'
 )});
 
-actions.push({uniqueId:'A17', prefix:'6', equation:'4', equation2:'10/dV', name:'Atacar/Etc/Agua bendita', bonus:new Array(
+actions.push({uniqueId:'A17', prefix:'6', equation:'4', equation2:'10/dV', category:'Atacar', name:'Agua bendita', bonus:new Array(
 	'+1|El objetivo está quieto',
 	'+1|Necesitas muy poca agua (un vaso)',
 	'-1|Necesitas bastante agua (garrafa)',

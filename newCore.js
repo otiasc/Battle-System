@@ -3,7 +3,7 @@
 	SEIJYUJI GAKUEN PRESENTS
 	NEW BATTLE SYSTEM.
 	
-	VERSION 3
+	VERSION 1.2 Final version
 
 */
 
@@ -301,6 +301,7 @@ function loadActionsMenu(page) {
 	CARGAR LOS TARGETS
 */
 function loadTargetList(data) {
+	$('#targetList').html('');
 	var h = $(data).contents().find('#memberlist tbody tr .avatar-mini a').each(function(index, element) {
 		var imgSrc = $(this).children('img').attr('src');
 		var text = $(this).text().slice(1);
@@ -327,11 +328,10 @@ function selectTarget(userName, userLink) {
 	$('#selectedTarget').html('Objetivo: ' + userName + ' <a href="javascript:void(0)" onclick="start()">(Cambiar)</a>');
 	
 	$('#targetList').addClass('disabled');
+	$('#actionSearch').removeClass('disabled');
 	
 	$('#usersearch').attr('value', userName);
 	$('#loading').removeClass('disabled');
-	
-	alert(userLink);
 	
 	$.ajax({
 		url: userLink,
