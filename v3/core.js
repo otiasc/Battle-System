@@ -420,7 +420,7 @@ function pasteCode() {
 	copyString += '<span class="BSData">'
 	copyString += g_chosenAction_uniqueId;
 	copyString += '|';
-	copyString += g_chosenTarget_id + g_chosenTarget_name;
+	copyString += g_chosenTarget_name + g_chosenTarget_id;
 	copyString += '|';
 	copyString += g_chosenOptions.slice(0,-1);
 	copyString += '</span>';
