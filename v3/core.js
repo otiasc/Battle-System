@@ -428,7 +428,7 @@ function pasteCode() {
 	copyString += '<span class="BSDices">'
 	if (g_resultsDificulty>10) {g_resultsDificulty=10}
 	if (g_resultsDificulty<0) {g_resultsDificulty=0}
-	copyString += '[roll=\"GENERIC' + parseInt(g_resultsDificulty,10) + '\"]' + Math.abs(g_resultsDices) + '[/roll]';
+	copyString += '[roll=\"NEW_GENERIC' + parseInt(g_resultsDificulty,10) + '\"]' + Math.abs(g_resultsDices) + '[/roll]';
 	copyString += '</span>'
 	
 	copyString += '</span>';
