@@ -1,12 +1,11 @@
-/*
-
-	SEIJYUJI GAKUEN PRESENTS
-	NEW BATTLE SYSTEM.
-	
-	VERSION 3
-	Actions
-			
-*/
+/*-------------------------------------------------------------------*\
+|                                                                     |
+|   SEIJYUJI GAKUEN PRESENTS                                          |
+|   NEW BATTLE SYSTEM.                                                |
+|                                                                     |
+|   listado de acciones                                               |
+|                                                                     |
+\*-------------------------------------------------------------------*/
 var actions = new Array();
 
 actions.push({uniqueId:'A1', dices:'aF', dif:'6+(dV-aV)/2', cat:'Atacar', name:'Puñetazo', tags:' mano brazo puño cuerpo golpe', bonus:'y1(mano)|y2(brazo)|e1|e2', results: new Array(
