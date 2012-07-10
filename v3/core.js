@@ -1,4 +1,4 @@
-/*--------------------------------------------------------------------
+/*--------------------------------------------------------------------\
 |                                                                     |
 |   SEIJYUJI GAKUEN PRESENTS                                          |
 |   NEW BATTLE SYSTEM.                                                |
@@ -6,7 +6,7 @@
 |   VERSION 3                                                         |
 |   core.js                                                           |
 |                                                                     |
- --------------------------------------------------------------------*/
+\--------------------------------------------------------------------*/
 var g_chosenAction_uniqueId;
 var g_chosenAction_name;
 var g_chosenTarget_name;
@@ -75,7 +75,7 @@ function getAction(_uniqueId) {
 	  map: objeto con todos los datos de la opción      
                                                       */
 function getOption(_id) {
-	// Split id and options
+	// Split id and options                             
 	var pos1 = _id.indexOf('('); var pos2 = _id.indexOf(')');
 	var optionId = '';
 	var params = '';
@@ -135,7 +135,7 @@ function loadActions() {
 	$('#targets').addClass('disabled');
 	$('#options').addClass('disabled');
 	
-	// Ordenar acciones por categoría
+	// Ordenar acciones por categoría                   
 	var cCategory = '';
 	$('#actionList').html('');
 	
@@ -207,33 +207,36 @@ function loadOptions() {
 	}
 }
 
+/*	FUNCIÓN searchActions (t)                           
+		Buscar acciones y las sitúa en #actionList      
+                                                      */
 function searchActions(t) {
 	var term = t.toLowerCase();
 	if (term=='') {loadActions()} else {
-		// Resultados comprimidos
+		// Resultados comprimidos                       
 		var searchResults = new Array();
-		// Buscar en el nombre de la acción algo igual
+		// Buscar en el nombre de la acción algo igual  
 		for (var i=0; i<actions.length; i++) {
 			if (actions[i].name.toLowerCase().indexOf(t)==0) {
 				searchResults.push(actions[i]);
 			}
 		}
 		
-		// Buscar en los tags
+		// Buscar en los tags                           
 		for (var i=0; i<actions.length; i++) {
 			if (actions[i].tags.toLowerCase().indexOf(' ' + t + ' ')!=-1) {
 				searchResults.push(actions[i]);
 			}
 		}
 		
-		// Buscar en el nombre de la acción algo que empiece por
+		// Buscar en el nombre de la acción algo que empiece por   
 		for (var i=0; i<actions.length; i++) {
 			if (actions[i].name.toLowerCase().indexOf(t)!=-1) {
 				searchResults.push(actions[i]);
 			}
 		}
 		
-		// Eliminar duplicados
+		// Eliminar duplicados                          
 		searchResults = searchResults.unique();
 		
 		$('#actionList').html('');
@@ -429,7 +432,8 @@ function pasteCode() {
 	if (g_resultsDificulty>10) {g_resultsDificulty=10}
 	if (g_resultsDificulty<0) {g_resultsDificulty=0}
 	copyString += '[roll=\"NEW_GENERIC' + parseInt(g_resultsDificulty,10) + '\"]' + Math.abs(g_resultsDices) + '[/roll]';
-	copyString += '</span>'
+	copyString += '[size=24]El resultado de la tirada solo aparecerá al enviar el post[/size]';
+	copyString += '</span>';
 	
 	copyString += '</span>';
 	
