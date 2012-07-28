@@ -177,7 +177,7 @@ function loadTargets() {
 			var id = $(this).attr('href');
 			
 			var newLi = $('<li></li>').append(
-				$('<a href="javascript:;" onclick="targetChosen(\'' + text + '\', \'' + id + '\')"></a>').append($('<img src="' + imgSrc + '" />'))
+				$('<a href="javascript:;" onclick="targetChosen(\'' + text + '\', \'' + id + '\')" title="' + text + '"></a>').append($('<img src="' + imgSrc + '" title="' + text + '" alt="' + text + '" />'))
 			).appendTo($('#targetList'));
 			
 			})
