@@ -431,7 +431,11 @@ function pasteCode() {
 	copyString += '<span class="BSDices">'
 	if (g_resultsDificulty>10) {g_resultsDificulty=10}
 	if (g_resultsDificulty<0) {g_resultsDificulty=0}
-	copyString += '[roll=\"NEW_GENERIC' + parseInt(g_resultsDificulty,10) + '\"]' + Math.abs(g_resultsDices) + '[/roll]';
+	
+	if (g_resultsDices<0) {g_resultsDices=0}
+	g_resultsDices = Math.round(g_resultsDices);
+	
+	copyString += '[roll=\"NEW_GENERIC' + parseInt(g_resultsDificulty,10) + '\"]' + g_resultsDices + '[/roll]';
 	copyString += '[size=24]El resultado de la tirada solo aparecerá al enviar el post[/size]';
 	copyString += '</span>';
 	
