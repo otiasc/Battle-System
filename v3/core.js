@@ -291,7 +291,6 @@ function targetChosen(_name, _id) {
 	loadTargetData();
 	
 	calculate();
-	$('#options').removeClass('disabled');
 }
 
 /*------------------------------------------------------------------
