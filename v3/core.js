@@ -193,13 +193,13 @@ function loadOptions() {
 	
 	$('#actions').addClass('disabled');
 	$('#targets').addClass('disabled');
+	$('#options').removeClass('disabled');
 	
 	$('#optionList').html('');
 	
 	var cAction = getAction(g_chosenAction_uniqueId);
 	
 	if (cAction.bonus.indexOf('|')!=-1) {
-		$('#options').removeClass('disabled');
 		var bonusArray = cAction.bonus.split('|');
 		
 		for (var i=0; i<bonusArray.length; i++) {
