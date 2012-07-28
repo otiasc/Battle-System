@@ -246,7 +246,7 @@ function searchActions(t) {
 		$('<li></li>').append('<h3>Resultados de búsqueda</h3>').appendTo($('#actionList'));
 		for (var j=0; j<searchResults.length; j++) {
 			var cAction = searchResults[j];
-			$('<li></li>').append('<a href="javascript:;" onclick="actionChosen(\"' + cAction.uniqueId + '\")">' + cAction.name + '</h3>').appendTo($('#actionList'));
+			$('<li></li>').append('<a href="javascript:;" onclick="actionChosen(\'' + cAction.uniqueId + '\')">' + cAction.name + '</h3>').appendTo($('#actionList'));
 		}
 	}
 }
