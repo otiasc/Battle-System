@@ -199,11 +199,14 @@ function loadOptions() {
 	
 	var cAction = getAction(g_chosenAction_uniqueId);
 	
-	var bonusArray = cAction.bonus.split('|');
-	for (var i=0; i<bonusArray.length; i++) {
-		var cO = getOption(bonusArray[i]);
-	
-		$('<li></li>').append('<label><input type="checkbox" id="' + cO.id + '" value="' + cO.vary + ' " /> ' + cO.name + '</label>').appendTo($('#optionList'));
+	if (cAction.bonus.indexOf('|')!=-1) {
+		var bonusArray = cAction.bonus.split('|');
+		
+		for (var i=0; i<bonusArray.length; i++) {
+			var cO = getOption(bonusArray[i]);
+		
+			$('<li></li>').append('<label><input type="checkbox" id="' + cO.id + '" value="' + cO.vary + ' " /> ' + cO.name + '</label>').appendTo($('#optionList'));
+		}
 	}
 }
 
