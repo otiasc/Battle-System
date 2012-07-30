@@ -357,6 +357,7 @@ function loadTargetData() {
 				MEM : parseInt(d2.find('#profile_field_10_9').attr('value')),
 				FAM : parseInt(d2.find('#profile_field_10_8').attr('value'))
 			}
+			alert('Velocidad defensa: ' + dDEFAULT.V);
 			dOK = true;
 			
 			calculate();
@@ -399,7 +400,7 @@ function calculate() {
 		
 		// Ejecutamos las opciones                                  
 		
-		alert(chosenOptions);
+		alert(aV + ':' + dV);
 		eval(chosenOptions);
 		
 		// Obtenemos los dados y dificultad de la acción escogida   
