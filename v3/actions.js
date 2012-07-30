@@ -60,14 +60,14 @@ actions.push({uniqueId:'A9', dices:'aF', dif:'6+(dF-aF)/2', cat:'Atacar', name:'
 	'0|0|   Ataque fallido',
 	'-1|-10|Ataque fallido. Te haces una herida leve en la rodilla'
 )});
-actions.push({uniqueId:'A10', dices:'1+aESG', dif:'6+(dV-aV)/3', cat:'Atacar', name:'Arma blanca de una mano', tags:' cuchillo daga knight ', bonus:'', results: new Array(
+actions.push({uniqueId:'A10', dices:'1+aESG', dif:'6+(dV-aV)/3', cat:'Atacar', name:'Apuñalar', tags:' arma blanca cuchillo daga knight ', bonus:'', results: new Array(
 	'1|10|  Ataque con éxito. <u>Herida leve</u>',
 	'0|0|   Ataque fallido.',
 	'-1|-3| Ataque fallido. El arma se queda clavada en suelo o pared. Para recuperarla realizar acción: <u>Otras/Recuperar arma</u>',
 	'-4|-5| Ataque fallido. Hieres al compañero más cercano en lugar no crítico. <u>Herida leve</u>',
 	'-6|-10|Ataque fallido. Te hieres a ti mismo en la pierna. <u>Herida leve en pierna</u>'
 )});
-actions.push({uniqueId:'A11', dices:'aESG', dif:'6+(dV-aV)/3', cat:'Atacar', name:'Arma blanca de dos manos', tags:' espada knight ', bonus:'', results: new Array(
+actions.push({uniqueId:'A11', dices:'aESG', dif:'6+(dV-aV)/3', cat:'Atacar', name:'Espada', tags:' arma blanca espada knight ', bonus:'', results: new Array(
 	'2|10|  Ataque con éxito. <u>Herida grave</u>',
 	'0|1|   Ataque fallido.',
 	'-1|-3| Ataque fallido. El arma se queda clavada en suelo o pared. Para recuperarla realizar acción: <u>Otras/Recuperar arma</u>',
