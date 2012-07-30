@@ -182,6 +182,11 @@ actions.push({uniqueId:'A24', dices:'aFAM', dif:'8-aD', cat:'Atacar', name:'Atac
 	'-4|-4| El familiar se vuelve contra ti. <u>Te provoca una herida leve</u> Debes realizar una tirada de <u>Tamer/Recuperar control de familiar</u>',
 	'-5|-10|El familiar se vuelve contra ti. <u>Te provoca una herida grave</u> Debes realizar una tirada de <u>Tamer/Recuperar control de familiar</u>'
 )});
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+
 actions.push({uniqueId:'C1', dices:'10', dif:'aDOC', cat:'Curar', name:'Curar herida normal', tags:' doctor herida medicina cura ', bonus:'', results: new Array(
 	'1|10|  Cura la parte dañada',
 	'0|0|   Falla la curación',
@@ -196,6 +201,11 @@ actions.push({uniqueId:'C2', dices:'10', dif:'aDOC', cat:'Curar', name:'Curar he
 	'-2|-2| Hieres al cuerpo dañado. <u>La herida pasa a muy grave (si ya estaba en muy grave, se daña una parte sana)</u>',
 	'-3|-10|Una parte sana se daña. <u>Herida grave</u>'
 )});
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+
 actions.push({uniqueId:'D1', dices:'5', dif:'8-aV', cat:'Defensa', name:'Alejarse del enemigo', tags:' defensa lejos huir correr ', bonus:'', results: new Array(
 	'1|10|  Consigues alejarte',
 	'0|0|   No consigues alejarte lo suficiente',
@@ -211,6 +221,11 @@ actions.push({uniqueId:'D3', dices:'5', dif:'6+(dV-aV)/2', cat:'Defensa', name:'
 	'0|0|   No consigues soltarte',
 	'-1|-10|Al forcejear te dañas. No te sueltas. [u]Herida leve[/u]'
 )});
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+
 actions.push({uniqueId:'O1', dices:'1+aI', dif:'6', cat:'Otras', name:'Buscar objeto en el suelo', tags:' buscar suelo perdido ', bonus:'', results: new Array(
 	'1|10| Recuperado',
 	'0|-10|No recuperado'
