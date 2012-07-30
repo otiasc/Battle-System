@@ -346,16 +346,16 @@ function loadTargetData() {
 		success: function (data) {
 			var d2 = $(data).contents();
 			dDEFAULT = {
-				V : parseInt(d2.find('#field_id_3 dd').text()),
-				F : parseInt(d2.find('#field_id_1 dd').text()),
-				I : parseInt(d2.find('#field_id_2 dd').text()),
-				D : parseInt(d2.find('#field_id_4 dd').text()),
+				V : parseInt(d2.find('#field_id3 dd').text()),
+				F : parseInt(d2.find('#field_id1 dd').text()),
+				I : parseInt(d2.find('#field_id2 dd').text()),
+				D : parseInt(d2.find('#field_id4 dd').text()),
 			
-				PUN : parseInt(d2.find('#field_id_5 dd').text()),
-				DOC : parseInt(d2.find('#field_id_7 dd').text()),
-				ESG : parseInt(d2.find('#field_id_6 dd').text()),
-				MEM : parseInt(d2.find('#field_id_9 dd').text()),
-				FAM : parseInt(d2.find('#field_id_8 dd').text())
+				PUN : parseInt(d2.find('#field_id5 dd').text()),
+				DOC : parseInt(d2.find('#field_id7 dd').text()),
+				ESG : parseInt(d2.find('#field_id6 dd').text()),
+				MEM : parseInt(d2.find('#field_id9 dd').text()),
+				FAM : parseInt(d2.find('#field_id8 dd').text())
 			}
 			alert(dDEFAULT.V + ':' + dDEFAULT.F + ':' + dDEFAULT.I + ':' + dDEFAULT.D + ':');
 			dOK = true;
