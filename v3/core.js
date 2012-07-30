@@ -344,19 +344,18 @@ function loadTargetData() {
 		context: document.body,
 		dataType: 'text',
 		success: function (data) {
-			alert(g_chosenTarget_id);
 			var d2 = $(data).contents();
 			dDEFAULT = {
-				V : parseInt(d2.find('#profile_field_10_3').attr('value')),
-				F : parseInt(d2.find('#profile_field_10_1').attr('value')),
-				I : parseInt(d2.find('#profile_field_10_2').attr('value')),
-				D : parseInt(d2.find('#profile_field_10_4').attr('value')),
+				V : parseInt(d2.find('#field_id_3 dd').text()),
+				F : parseInt(d2.find('#field_id_1 dd').text()),
+				I : parseInt(d2.find('#field_id_2 dd').text()),
+				D : parseInt(d2.find('#field_id_4 dd').text()),
 			
-				PUN : parseInt(d2.find('#profile_field_10_5').attr('value')),
-				DOC : parseInt(d2.find('#profile_field_10_7').attr('value')),
-				ESG : parseInt(d2.find('#profile_field_10_6').attr('value')),
-				MEM : parseInt(d2.find('#profile_field_10_9').attr('value')),
-				FAM : parseInt(d2.find('#profile_field_10_8').attr('value'))
+				PUN : parseInt(d2.find('#field_id_5 dd').text()),
+				DOC : parseInt(d2.find('#field_id_7 dd').text()),
+				ESG : parseInt(d2.find('#field_id_6 dd').text()),
+				MEM : parseInt(d2.find('#field_id_9 dd').text()),
+				FAM : parseInt(d2.find('#field_id_8 dd').text())
 			}
 			alert(dDEFAULT.V + ':' + dDEFAULT.F + ':' + dDEFAULT.I + ':' + dDEFAULT.D + ':');
 			dOK = true;
