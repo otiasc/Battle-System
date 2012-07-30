@@ -398,11 +398,15 @@ function calculate() {
 		var dPUN = dDEFAULT.PUN; var dDOC = dDEFAULT.DOC; var dESG = dDEFAULT.ESG; var dMEM = dDEFAULT.MEM; var dFAM = dDEFAULT.FAM;
 		
 		// Ejecutamos las opciones                                  
+		
+		alert(chosenOptions);
 		eval(chosenOptions);
 		
 		// Obtenemos los dados y dificultad de la acción escogida   
+		
 		g_resultsDices = eval(chosenAction.dices);
 		g_resultsDificulty = eval(chosenAction.dif);
+		alert(chosenAction.dices + ':' + g_resultsDices + '\n' + chosenAction.dif + ':' + g_resultsDificulty );
 		
 		$('#submit_bar button').html('Pegar código');
 	}
