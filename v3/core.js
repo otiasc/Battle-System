@@ -344,6 +344,7 @@ function loadTargetData() {
 		context: document.body,
 		dataType: 'text',
 		success: function (data) {
+			alert(g_chosenTarget_id);
 			var d2 = $(data).contents();
 			dDEFAULT = {
 				V : parseInt(d2.find('#profile_field_10_3').attr('value')),
