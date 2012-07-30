@@ -357,7 +357,6 @@ function loadTargetData() {
 				MEM : parseInt(d2.find('#field_id9 dd').text()),
 				FAM : parseInt(d2.find('#field_id8 dd').text())
 			}
-			alert(dDEFAULT.V + ':' + dDEFAULT.F + ':' + dDEFAULT.I + ':' + dDEFAULT.D + ':');
 			dOK = true;
 			
 			calculate();
