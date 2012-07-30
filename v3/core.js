@@ -357,6 +357,7 @@ function loadTargetData() {
 				MEM : parseInt(d2.find('#profile_field_10_9').attr('value')),
 				FAM : parseInt(d2.find('#profile_field_10_8').attr('value'))
 			}
+			alert(dDEFAULT.V + ':' + dDEFAULT.F + ':' + dDEFAULT.I + ':' + dDEFAULT.D + ':');
 			dOK = true;
 			
 			calculate();
