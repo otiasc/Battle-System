@@ -141,33 +141,33 @@ actions.push({uniqueId:'A20', dices:'5', dif:'4+dV/2', cat:'Atacar', name:'Agua 
 	'-1|-1| Empapas a un compañero',
 	'-2|-10|Empapas a un compañero y su alrededor'
 )});
-actions.push({uniqueId:'A21', dices:'aMEM', dif:'5-aI', cat:'Atacar', name:'Versos fatales cortos', tags:' aria memoria ', bonus:'', results: new Array(
-	'10|10| +10 aciertos. Necesitas acumular 7 aciertos para terminar los versos',
-	'9|9|   +9 aciertos. Necesitas acumular 7 aciertos para terminar los versos',
-	'8|8|   +8 aciertos. Necesitas acumular 7 aciertos para terminar los versos',
-	'7|7|   +7 aciertos. Necesitas acumular 7 aciertos para terminar los versos',
-	'6|6|   +6 aciertos. Necesitas acumular 7 aciertos para terminar los versos',
-	'5|5|   +5 aciertos. Necesitas acumular 7 aciertos para terminar los versos',
-	'4|4|   +4 aciertos. Necesitas acumular 7 aciertos para terminar los versos',
-	'3|3|   +3 aciertos. Necesitas acumular 7 aciertos para terminar los versos',
-	'2|2|   +2 aciertos. Necesitas acumular 7 aciertos para terminar los versos',
-	'1|1|   +1 aciertos. Necesitas acumular 7 aciertos para terminar los versos',
-	'0|0|   +0 aciertos. Necesitas acumular 7 aciertos para terminar los versos',
+actions.push({uniqueId:'A21', dices:'aMEM+2', dif:'5-aI', cat:'Atacar', name:'Versos fatales cortos', tags:' aria memoria ', bonus:'', results: new Array(
+	'10|10| +10 aciertos. Necesitas acumular 7 aciertos para terminar los versos. Cuando acabe: herida leve-grave a todos los enemigos',
+	'9|9|   +9 aciertos. Necesitas acumular 7 aciertos para terminar los versos. Cuando acabe: herida leve-grave a todos los enemigos',
+	'8|8|   +8 aciertos. Necesitas acumular 7 aciertos para terminar los versos. Cuando acabe: herida leve-grave a todos los enemigos',
+	'7|7|   +7 aciertos. Necesitas acumular 7 aciertos para terminar los versos. Cuando acabe: herida leve-grave a todos los enemigos',
+	'6|6|   +6 aciertos. Necesitas acumular 7 aciertos para terminar los versos. Cuando acabe: herida leve-grave a todos los enemigos',
+	'5|5|   +5 aciertos. Necesitas acumular 7 aciertos para terminar los versos. Cuando acabe: herida leve-grave a todos los enemigos',
+	'4|4|   +4 aciertos. Necesitas acumular 7 aciertos para terminar los versos. Cuando acabe: herida leve-grave a todos los enemigos',
+	'3|3|   +3 aciertos. Necesitas acumular 7 aciertos para terminar los versos. Cuando acabe: herida leve-grave a todos los enemigos',
+	'2|2|   +2 aciertos. Necesitas acumular 7 aciertos para terminar los versos. Cuando acabe: herida leve-grave a todos los enemigos',
+	'1|1|   +1 aciertos. Necesitas acumular 7 aciertos para terminar los versos. Cuando acabe: herida leve-grave a todos los enemigos',
+	'0|0|   +0 aciertos. Necesitas acumular 7 aciertos para terminar los versos. Cuando acabe: herida leve-grave a todos los enemigos',
 	'-1|-10|Versos interrumpidos. El exorcista debe empezar'
 	
 )});
-actions.push({uniqueId:'A22', dices:'aMEM', dif:'5-aI', cat:'Atacar', name:'Versos fatales largos', tags:' aria memoria ', bonus:'', results: new Array(
-	'10|10| +10 aciertos. Necesitas acumular 15 aciertos para terminar los versos',
-	'9|9|   +9 aciertos. Necesitas acumular 15 aciertos para terminar los versos',
-	'8|8|   +8 aciertos. Necesitas acumular 15 aciertos para terminar los versos',
-	'7|7|   +7 aciertos. Necesitas acumular 15 aciertos para terminar los versos',
-	'6|6|   +6 aciertos. Necesitas acumular 15 aciertos para terminar los versos',
-	'5|5|   +5 aciertos. Necesitas acumular 15 aciertos para terminar los versos',
-	'4|4|   +4 aciertos. Necesitas acumular 15 aciertos para terminar los versos',
-	'3|3|   +3 aciertos. Necesitas acumular 15 aciertos para terminar los versos',
-	'2|2|   +2 aciertos. Necesitas acumular 15 aciertos para terminar los versos',
-	'1|1|   +1 aciertos. Necesitas acumular 15 aciertos para terminar los versos',
-	'0|0|   +0 aciertos. Necesitas acumular 15 aciertos para terminar los versos',
+actions.push({uniqueId:'A22', dices:'aMEM+2', dif:'5-aI', cat:'Atacar', name:'Versos fatales largos', tags:' aria memoria ', bonus:'', results: new Array(
+	'10|10| +10 aciertos. Necesitas acumular 15 aciertos para terminar los versos. Cuando acabe: herida grave-muy grave a todos los enemigos',
+	'9|9|   +9 aciertos. Necesitas acumular 15 aciertos para terminar los versos. Cuando acabe: herida grave-muy grave a todos los enemigos',
+	'8|8|   +8 aciertos. Necesitas acumular 15 aciertos para terminar los versos. Cuando acabe: herida grave-muy grave a todos los enemigos',
+	'7|7|   +7 aciertos. Necesitas acumular 15 aciertos para terminar los versos. Cuando acabe: herida grave-muy grave a todos los enemigos',
+	'6|6|   +6 aciertos. Necesitas acumular 15 aciertos para terminar los versos. Cuando acabe: herida grave-muy grave a todos los enemigos',
+	'5|5|   +5 aciertos. Necesitas acumular 15 aciertos para terminar los versos. Cuando acabe: herida grave-muy grave a todos los enemigos',
+	'4|4|   +4 aciertos. Necesitas acumular 15 aciertos para terminar los versos. Cuando acabe: herida grave-muy grave a todos los enemigos',
+	'3|3|   +3 aciertos. Necesitas acumular 15 aciertos para terminar los versos. Cuando acabe: herida grave-muy grave a todos los enemigos',
+	'2|2|   +2 aciertos. Necesitas acumular 15 aciertos para terminar los versos. Cuando acabe: herida grave-muy grave a todos los enemigos',
+	'1|1|   +1 aciertos. Necesitas acumular 15 aciertos para terminar los versos. Cuando acabe: herida grave-muy grave a todos los enemigos',
+	'0|0|   +0 aciertos. Necesitas acumular 15 aciertos para terminar los versos. Cuando acabe: herida grave-muy grave a todos los enemigos',
 	'-1|-10|Versos interrumpidos. El exorcista debe empezar'
 )});
 actions.push({uniqueId:'A23', dices:'5', dif:'8-aD', cat:'Atacar', name:'Invocar familiar', tags:' tamer invocación invocar convocar convoca ', bonus:'', results: new Array(
