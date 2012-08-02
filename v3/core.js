@@ -440,7 +440,8 @@ function pasteCode() {
 	g_resultsDices = Math.round(g_resultsDices);
 	
 	copyString += '[roll=\"NEW_GENERIC' + parseInt(g_resultsDificulty,10) + '\"]' + g_resultsDices + '[/roll]';
-	copyString += '[size=24]El resultado de la tirada solo aparecerá al enviar el post[/size]';
+	copyString += '[hide][size=18]El resultado de la tirada [b]solo aparecerá al enviar el post[/b]. Puede variar respecto a lo que se ve en la previsualización.[/size]\n';
+	copyString += '[size=18][b]No se debe editar el post[/b] ya que el resultado de la tirada puede cambiar[/size][/hide]';
 	copyString += '</span>';
 	
 	copyString += '</span>';
