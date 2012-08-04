@@ -170,7 +170,7 @@ function loadTargets() {
 		success: function (data) {
 			$('#targets').removeClass('loading');
 			
-			var h = $(data).contents().find('#memberlist tbody tr .avatar-mini a').each(function(index, element) {
+			var h = $(data).contents().find('#memberlist tbody tr td.avatar-mini a').each(function(index, element) {
 				
 			var imgSrc = $(this).children('img').attr('src');
 			var text = $(this).text().slice(1);
@@ -195,7 +195,7 @@ function loadOptions() {
 	$('#targets').addClass('disabled');
 	$('#options').removeClass('disabled');
 	
-	$('#optionList').html('');
+	$('optionList').html('');
 	
 	var cAction = getAction(g_chosenAction_uniqueId);
 	
@@ -433,8 +433,8 @@ function pasteCode() {
 	copyString += '</span>';
 	
 	copyString += '<span class="BSDices">'
-	if (g_resultsDificulty>10) {g_resultsDificulty=10}
-	if (g_resultsDificulty<0) {g_resultsDificulty=0}
+	if (g_resultsDificulty>15) {g_resultsDificulty=15}
+	if (g_resultsDificulty<1) {g_resultsDificulty=1}
 	
 	if (g_resultsDices<0) {g_resultsDices=0}
 	g_resultsDices = Math.round(g_resultsDices);
