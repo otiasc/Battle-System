@@ -170,7 +170,7 @@ function loadTargets() {
 		success: function (data) {
 			$('#targets').removeClass('loading');
 			
-			var h = $(data).contents().find('#memberlist tbody tr td.avatar-mini a').each(function(index, element) {
+			var h = $(data).contents().find('#memberlist tbody tr .avatar-mini a').each(function(index, element) {
 				
 			var imgSrc = $(this).children('img').attr('src');
 			var text = $(this).text().slice(1);
